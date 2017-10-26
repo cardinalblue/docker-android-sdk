@@ -1,4 +1,4 @@
-FROM circleci/android:api-25-alpha
+FROM circleci/android:api-26-alpha
 ENV PATH=${ANDROID_HOME}/build-tools/25.0.3:${PATH}
 ADD Gemfile* ./
 RUN sudo apt-get install build-essential make ruby-dev curl zlib1g-dev liblzma-dev \
