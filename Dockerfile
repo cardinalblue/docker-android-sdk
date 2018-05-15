@@ -1,8 +1,7 @@
 FROM circleci/android:api-26-alpha
-ENV PATH=${ANDROID_HOME}/build-tools/25.0.3:${PATH}
 ADD Gemfile* ./
 RUN sudo apt-get install build-essential make ruby-dev curl zlib1g-dev liblzma-dev \
-    && sudo gem install bundler -v 1.14.6 \
+    && sudo gem install bundler -v 1.16.0 \
     && bundle install \
     && sudo rm Gemfile*
 CMD 'sh'
